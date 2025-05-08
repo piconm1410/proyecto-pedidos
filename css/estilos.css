@@ -1,0 +1,540 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	font-family: 'Oswald', sans-serif;
+}
+
+/*PORTA*/
+
+#conte2{
+	text-align:justify;
+	padding:22px;
+	font-size:18px;
+	overflow:hidden;
+	animation:2s entradaconte 1;
+}
+
+#porta img:hover{
+	filter:sepia(100%);
+}
+
+
+/*PORTA*/
+
+/*CONTACTO*/
+
+
+
+
+.claseform{
+	border:solid 1px #000000;
+	padding:8px 7px;
+	margin:5px 0;
+	width:96%;
+	border-radius:5px;
+}
+
+
+
+.claseboton:hover{
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+1,710001+100 */
+background: rgb(0,0,0); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(0,0,0,1) 1%, rgba(113,0,1,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 1%,rgba(113,0,1,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,1) 1%,rgba(113,0,1,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#710001',GradientType=0 ); /* IE6-9 */
+
+border:solid 3px rgba(0,0,0,1)
+}
+
+/*CONTACTO*/
+
+body{
+	margin:0;
+	animation:2s entradabody 1;
+}
+
+
+
+#superior{
+	background:rgba(0,0,0,1);
+	min-height:20px;
+}
+
+
+header{
+	background:rgba(245,238,222,1);
+	min-height:128px;
+}
+
+
+
+
+
+
+/*CONTENIDO TEXTO*/
+
+#contenido{
+	max-width:1200px;
+	margin:0 auto;
+	min-height:128px;
+}
+
+
+#titulo{
+	text-align:center;
+	padding:22px;
+	font-size:20px;
+	color:rgba(113,0,1,1);
+	animation:1s entradatitulo 1;
+}
+
+
+#conte{
+	text-align:justify;
+	padding:22px;
+	font-size:18px;
+	overflow:hidden;
+	animation:2s entradaconte 1;
+}
+
+#conte3{
+	text-align:justify;
+	padding:22px;
+	font-size:18px;
+	overflow:hidden;
+	animation:2s entradaconte 1;
+}
+
+.clase-izq{
+	float:left;
+	margin:0 15px 0 0;
+}
+
+.clase-der{
+	float:right;
+	margin:0 0 0 15px;
+}
+
+#conte img{
+	max-width:70%;
+	min-height:70%;
+}
+
+/*CONTENIDO TEXTO*/
+
+/*PLANES*/
+
+
+#planes{
+	min-height:350px;
+	background:rgba(102,153,255,1);
+	background-image:url(../imagenes/jpg/parallax.jpg);
+	background-size:cover;
+	background-position:center;
+	background-attachment:fixed;
+}
+
+#phosting{
+	max-width:1200px;
+	min-height:350px;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+
+
+
+#p2{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a80306+1,910205+44,6d0001+100 */
+background: #a80306; /* Old browsers */
+background: -moz-linear-gradient(top,  #a80306 1%, #910205 44%, #6d0001 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #a80306 1%,#910205 44%,#6d0001 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #a80306 1%,#910205 44%,#6d0001 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a80306', endColorstr='#6d0001',GradientType=0 ); /* IE6-9 */
+
+border-radius:15px 15px 0 0;
+padding:5px;
+color:rgba(255,255,255,1);
+font-size:24px;
+text-align:center;
+}
+
+#p3{
+	text-align:center;
+	padding:33px;
+}
+
+#p1 ul{
+	list-style:none;
+	text-align:center;
+	margin:0;
+	padding:0;
+}
+
+#p1 li{
+	margin:8px 0 8px 0;
+}
+
+.clase-precio{
+	font-size:24px;
+	color:rgba(255,0,0,1);
+}
+
+#p1:hover{
+	transform:scale(1.1);
+}
+
+.clase-color{
+	color:rgba(255,255,255,1);
+}
+
+/*PLANES*/
+
+
+
+/*UBÍCANOS*/
+
+#tit1{
+	padding:10px;
+	background:rgba(77,106,121,1);
+}
+
+#tit2{
+	max-width:1200px;
+	
+	margin:0 auto;
+	font-size:36px;
+	padding:0 0 0 22px;
+	color:rgba(255,255,255,1);
+}
+
+#mapa{
+	
+	height:480px;
+}
+
+/*UBÍCANOS*/
+
+
+/*PIE DE PÁGINA*/
+
+footer{
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+1,710001+100 */
+background: rgb(0,0,0); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(0,0,0,1) 1%, rgba(113,0,1,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 1%,rgba(113,0,1,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,1) 1%,rgba(113,0,1,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#710001',GradientType=0 ); /* IE6-9 */
+
+	min-height:200px;
+}
+
+#pie{
+	
+	min-height:200px;
+	max-width:1200px;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+#redes img{
+	width:50px;
+	margin:5px;
+}
+
+
+#redes img:hover{
+	filter:blur(2px);
+	animation:1s rot 1;
+}
+
+/*PIE DE PÁGINA*/
+
+
+/*PANTALLA DEL ESCRITORIO*/
+@media screen and (min-width:1200px)
+{
+	.claseboton{
+	border:solid 3px rgba(113,0,1,1);
+	padding:12px 33px;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a80306+1,910205+44,6d0001+100 */
+background: #a80306; /* Old browsers */
+background: -moz-linear-gradient(top,  #a80306 1%, #910205 44%, #6d0001 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #a80306 1%,#910205 44%,#6d0001 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #a80306 1%,#910205 44%,#6d0001 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+color:rgba(255,255,255,1);
+font-size:18px;
+border-radius:8px;
+}
+	
+	#col1{
+	
+	width:850px;
+	float:left;
+	min-height:550px;
+}
+	#col2{
+	
+	width:300px;
+	min-height:550px;
+	float:right;
+}
+	
+	#porta{
+	background:rgba(216,216,216,1);
+	width:205.5px;
+	height:145px;
+	float:left;
+	margin:12px;
+}
+
+	#conte2 img{
+	width:100%;
+	height:100%;
+	border:solid 2px #000000;
+	padding:9px;
+	box-sizing:border-box;
+}
+	
+	#redes{
+	
+	width:200px;
+	min-height:50px;
+	margin:22px;
+	float:right;
+}
+
+	
+	#direccion{
+	
+	width:400px;
+	min-height:50px;
+	margin:22px;
+	float:left;
+	color:#FFF;
+}
+	
+	#p1{
+	width:250px;
+	min-height:350px;
+	background:rgba(103,41,33,0.5);
+	margin:13px;
+	float:left;
+	padding:12px;
+	border-radius:15px;
+	transition:1s;
+}
+	
+	#logo{
+	padding:18px 0 0 0;
+	float:left;
+	animation:2s entradalogo 1;
+}
+
+	#menu{
+/*	background:#00F;*/
+	
+	padding:6px;
+	float:right;
+	margin:30px 0 0 0;
+	animation:1s entradamenu 1;
+}	
+	#telefonos{
+	color:#FFF;
+	max-width:1200px;
+	margin:0 auto;
+	padding:8px;
+	animation:1s entradatelf 1;
+}
+
+#cabecera{
+	max-width:1200px;
+	min-height:128px;
+	margin:0 auto;
+	
+}
+
+}
+
+
+
+
+/*PANTALLA DEL CELULAR O TABLET*/
+@media screen and (max-width:1200px)
+{
+	.claseboton{
+	border:solid 3px rgba(113,0,1,1);
+	padding:6px 12px;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a80306+1,910205+44,6d0001+100 */
+background: #a80306; /* Old browsers */
+background: -moz-linear-gradient(top,  #a80306 1%, #910205 44%, #6d0001 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #a80306 1%,#910205 44%,#6d0001 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #a80306 1%,#910205 44%,#6d0001 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+color:rgba(255,255,255,1);
+font-size:15px;
+border-radius:8px;
+}
+	
+	#col1{
+	
+	
+	min-height:550px;
+}
+	#col2{
+	
+	max-width:500px;
+	min-height:550px;
+	margin:0 auto;
+}
+	#col2 img{
+	width:100%;
+	height:100%
+}
+	
+	#porta{
+	background:rgba(216,216,216,1);
+	max-width:600px;
+	min-height:10px;
+	border:solid 2px #000000;
+	padding:9px;
+	margin:12px auto;
+}
+	
+	#conte2 img{
+	width:100%;
+	height:100%;
+	
+	
+	box-sizing:border-box;
+}
+	
+	#redes{
+	
+	
+	min-height:50px;
+	margin:22px;
+	text-align:center;
+}
+	
+	#direccion{
+	min-height:50px;
+	margin:22px;
+	color:#FFF;
+	text-align:center;
+}
+	
+	#p1{
+	
+	min-height:350px;
+	background:rgba(103,41,33,0.5);
+	margin:13px;
+	
+	padding:12px;
+	border-radius:15px;
+	transition:1s;
+}
+	
+	#cabecera{
+	max-width:1200px;
+	min-height:128px;
+	margin:0 auto;
+	overflow:hidden;
+}
+	
+	
+	#telefonos{
+	color:#FFF;
+	max-width:1200px;
+	margin:0 auto;
+	padding:8px;
+	text-align:center;
+	font-size:14px;
+	animation:1s entradatelf 1;
+	}
+	
+	
+	#menu{
+/*	background:#00F;*/
+	
+	padding:6px;
+	margin:30px 0 0 0;
+	animation:1s entradamenu 1;
+}
+	
+	
+	
+	#logo{
+	padding:18px 0 0 0;
+	text-align:center;
+	animation:2s entradalogo 1;
+}
+	
+	
+	#logo img{
+		width:200px;
+	}
+	
+	
+}
+
+
+/*KEYFRAMES*/
+
+@keyframes entradabody{
+	0%{
+		opacity:0;
+	}
+}
+
+@keyframes entradatelf{
+	0%{
+		opacity:0;
+		transform:translateX(500px);
+	}
+}
+
+@keyframes entradalogo{
+	0%{
+		opacity:0;
+		transform:translateY(-200px);
+	}
+	30%{
+		transform:rotateY(270deg);
+	}
+}
+
+@keyframes entradamenu{
+	0%{
+		opacity:0;
+		transform:translateY(500px);
+	}
+}
+
+@keyframes entradatitulo{
+	0%{
+		opacity:0;
+		transform:translateX(500px);
+	}
+}
+
+@keyframes entradaconte{
+	0%{
+		opacity:0;
+	}
+	30%{
+		opacity:0;
+		transform:translateX(-700px);
+	}
+}
+
+@keyframes rot{
+	0%{
+		transform:rotate(270deg) scale(1.2);
+	}
+}
+
+/*KEYFRAMES*/
