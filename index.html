@@ -1,414 +1,252 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
-<meta charset="utf-8">
-<title>Ventas y Preventas de Objetos, Figuras, Prendas de vestir, Cajas de comida japonesa y Más...</title>
-<link rel="stylesheet" type="text/css" href="css/estilos.css">
-<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Ventas y Preventas de Objetos, Figuras, Prendas de vestir, Cajas de comida japonesa y Más...</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 
-<meta name="keywords" content="Ventas y Preventas de Albumes , Discos y Vinilos Perú">
-<meta name="description" content="Vendemos Albumes , Discos y Vinilos de todos los generos de musica en Perú">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Ventas y Preventas de Albumes, Discos y Vinilos Perú">
+    <meta name="description" content="Vendemos Albumes, Discos y Vinilos de todos los géneros de música en Perú">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Estilos y Scripts -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/jquery-latest.min.js"></script>
+    <script src="js/script.js"></script>
 
-<!--MENU HORIZONTAL-->
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-<script src="js/jquery-latest.min.js"></script>
-<script src="js/script.js"></script>
+    <!-- WOWSlider -->
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
 
-<!--MENU HORIZONTAL-->
+    <!-- Botón Arriba -->
+    <link rel="stylesheet" href="css/arriba.css">
+    <script src="js/arriba.js"></script>
 
+    <!-- Anclas Deslizantes -->
+    <script type="text/javascript" src="js/stickyMojo.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#cssmenu').stickyMojo({ footerID: '#footer', contentID: '#content' });
 
-<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
-	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
-	<script type="text/javascript" src="engine1/jquery.js"></script>
+            $('.ancla').click(function() {
+                var link = $(this);
+                var anchor = link.attr('href');
+                $('html, body').stop().animate({
+                    scrollTop: $(anchor).offset().top
+                }, 2000);
+                return false;
+            });
+        });
+    </script>
 
-	<!-- End WOWSlider.com HEAD section -->
+    <!-- Zendesk Widget -->
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=aafb5443-827a-4e9c-a132-68192befb81b"></script>
 
+    <style>
+        /* Estilos para el botón de login */
+        #btn-login {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-<!-- BOTON ARRIBA HEAD-->
-        <link rel="stylesheet" href="css/arriba.css">
-        <script src="js/jquery-latest.min.js"></script>
-        <script src="js/arriba.js"></script>
-<!-- BOTON ARRIBA HEAD-->
-
-
-
-<!-- anclas deslizantes -->
-<script type="text/javascript" src="js/jquery-latest.min.js"></script>
-<script type="text/javascript" src="js/stickyMojo.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {	
-
-	$('#cssmenu').stickyMojo({footerID: '#footer', contentID: '#content'});
-
-	$('.ancla').click(function(){
-		var link = $(this);
-		var anchor  = link.attr('href');
-		$('html, body').stop().animate({
-			scrollTop: jQuery(anchor).offset().top
-		}, 2000);
-		return false;
-	});
-});
-</script>
- <!-- anclas deslizantes --> 
-
-
-<!-- Start of  Zendesk Widget script -->
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=aafb5443-827a-4e9c-a132-68192befb81b"> </script>
-<!-- End of  Zendesk Widget script -->
-
-<style>
-    /* Estilos para el botón de login */
-    #login-section {
-        text-align: center;
-        margin: 20px 0;
-    }
-
-    #btn-login {
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    #btn-login:hover {
-        background-color: #0056b3;
-    }
-</style>
-
+        #btn-login:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Botón Arriba -->
+    <span class="ir-arriba icon-arrow-up2">^</span>
 
-
-<!-- BOTON ARRIBA BODY-->
-<span class="ir-arriba icon-arrow-up2">^</span>
-<!-- BOTON ARRIBA BODY-->   
-
-	<!--ZONA TELEFONOS-->
-	<section id="superior">
-    
-    <section id="telefonos"><img src="imagenes/png/old-typical-phone.png">  Telefonos : 6338436 | <img src="imagenes/png/smartphone-call.png"> Celular : 987411635 </section>
-    
-    
-    
+    <!-- Zona Teléfonos -->
+    <section id="superior">
+        <section id="telefonos">
+            <img src="imagenes/png/old-typical-phone.png"> Teléfonos: 6338436 |
+            <img src="imagenes/png/smartphone-call.png"> Celular: 987411635
+        </section>
     </section>
-    <!--ZONA TELEFONOS-->
-    
-    
-    
-    
-    <!--CABECERA-->
-	<header>
-    
-    	<section id="cabecera">
-        
-        
-        	<!--LOGO-->
+
+    <!-- Cabecera -->
+    <header>
+        <section id="cabecera">
+            <!-- Logo -->
             <section id="logo">
-            
-            	<img src="imagenes/png/logo.png">
-            
-            
+                <img src="imagenes/png/logo.png" alt="Logo">
             </section>
-            <!--LOGO-->
-            
-            <!--MENU-->
-        	<section id="menu">
-            
-            	<nav id="cssmenu">
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="quienessomos.html">Quienes Somos</a></li>
-        <li><a href="#planes" class="ancla">Compras</a>
-            <!--DESPLEGABLES-->
-            <ul>
-                <li><a href="objetos.html">Objetos</a></li>
-                <li><a href="mangas.html">Mangas</a></li>
-                <li><a href="cajas.html">Cajas Sorpresa</a></li>
-                <li><a href="prendasdevestir.html">Prendas de vestir</a></li>
-            </ul>
-            <!--DESPLEGABLES-->
-        </li>
-        <li><a href="#mapa" class="ancla">Ubícanos</a></li>
-        <li><a href="contacto.html">Contáctenos</a></li>
-        <!-- Botón de acceso al login -->
-        <li><a href="login.html" style="color: #ffffff; font-weight: bold;">Acceder al Inventario</a></li>
-    </ul>
-</nav>
 
-<style>
-    /* Estilo para el botón de login en el menú */
-    #btn-login {
-        background-color: #007BFF;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    #btn-login:hover {
-        background-color: #0056b3;
-    }
-</style>
-            
-     
-            
-            
+            <!-- Menú -->
+            <section id="menu">
+                <nav id="cssmenu">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="quienessomos.html">Quienes Somos</a></li>
+                        <li><a href="#planes" class="ancla">Compras</a>
+                            <ul>
+                                <li><a href="objetos.html">Objetos</a></li>
+                                <li><a href="mangas.html">Mangas</a></li>
+                                <li><a href="cajas.html">Cajas Sorpresa</a></li>
+                                <li><a href="prendasdevestir.html">Prendas de vestir</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#mapa" class="ancla">Ubícanos</a></li>
+                        <li><a href="frontend/login.html" style="color: #ffffff; font-weight: bold;">Iniciar Sesión</a></li>
+                        <li><a href="frontend/registro.html" style="color: #ffffff; font-weight: bold;">Registrarse</a></li>
+                    </ul>
+                </nav>
             </section>
-            <!--MENU-->
-        
-        
         </section>
-    
-    
     </header>
-    <!--CABECERA-->
-    
-    
-    
-    <!--SLIDER-->
+
+    <!-- Slider -->
     <section id="slider">
-    
-    
-  
-    
-    
-    <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
-	<div id="wowslider-container1">
-	<div class="ws_images"><ul>
-		<li><img src="data1/images/1.jpg" alt="Titulo de Prueba" title="Titulo de Prueba" id="wows1_0"/></li>
-		<li><img src="data1/images/3.jpg" alt="3" title="3" id="wows1_1"/></li>
-		<li><img src="data1/images/4.jpg" alt="4" title="4" id="wows1_2"/></li>
-		<li><a href="http://wowslider.com"><img src="data1/images/5.jpg" alt="http://wowslider.com/" title="5" id="wows1_3"/></a></li>
-		<li><img src="data1/images/6.jpg" alt="6" title="6" id="wows1_4"/></li>
-	</ul></div>
-	<div class="ws_bullets"><div>
-		<a href="#" title="Titulo de Prueba"><span><img src="data1/tooltips/1.jpg" alt="Titulo de Prueba"/>1</span></a>
-		<a href="#" title="3"><span><img src="data1/tooltips/3.jpg" alt="3"/>2</span></a>
-		<a href="#" title="4"><span><img src="data1/tooltips/4.jpg" alt="4"/>3</span></a>
-		<a href="#" title="5"><span><img src="data1/tooltips/5.jpg" alt="5"/>4</span></a>
-		<a href="#" title="6"><span><img src="data1/tooltips/6.jpg" alt="6"/>5</span></a>
-	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com">wowslider</a> by WOWSlider.com v8.7</div>
-	<div class="ws_shadow"></div>
-	</div>	
-	<script type="text/javascript" src="engine1/wowslider.js"></script>
-	<script type="text/javascript" src="engine1/script.js"></script>
-	<!-- End WOWSlider.com BODY section -->
-    
-    
-    
+        <div id="wowslider-container1">
+            <div class="ws_images">
+                <ul>
+                    <li><img src="data1/images/1.jpg" alt="Titulo de Prueba" title="Titulo de Prueba" id="wows1_0"/></li>
+                    <li><img src="data1/images/3.jpg" alt="3" title="3" id="wows1_1"/></li>
+                    <li><img src="data1/images/4.jpg" alt="4" title="4" id="wows1_2"/></li>
+                    <li><a href="http://wowslider.com"><img src="data1/images/5.jpg" alt="http://wowslider.com/" title="5" id="wows1_3"/></a></li>
+                    <li><img src="data1/images/6.jpg" alt="6" title="6" id="wows1_4"/></li>
+                </ul>
+            </div>
+            <div class="ws_bullets">
+                <div>
+                    <a href="#" title="Titulo de Prueba"><span><img src="data1/tooltips/1.jpg" alt="Titulo de Prueba"/>1</span></a>
+                    <a href="#" title="3"><span><img src="data1/tooltips/3.jpg" alt="3"/>2</span></a>
+                    <a href="#" title="4"><span><img src="data1/tooltips/4.jpg" alt="4"/>3</span></a>
+                    <a href="#" title="5"><span><img src="data1/tooltips/5.jpg" alt="5"/>4</span></a>
+                    <a href="#" title="6"><span><img src="data1/tooltips/6.jpg" alt="6"/>5</span></a>
+                </div>
+            </div>
+            <div class="ws_shadow"></div>
+        </div>
+        <script type="text/javascript" src="engine1/wowslider.js"></script>
+        <script type="text/javascript" src="engine1/script.js"></script>
     </section>
-    <!--SLIDER-->
- 
+
+    <!-- Contenido -->
+    <section id="contenido"> 
     
-      <!--CONTENIDO-->
-    
-    	<section id="contenido">
-        
-        		<section id="titulo">Bienvenidos a Subete no hanbai</section>
-                <section id="conte">
-                
-                <img src="imagenes/jpg/h1.png" class="clase-izq">
-                
-                
-                Aquí podrás encontrar una variedad de productos asiáticos, de buna calidad y a precios accesibles que te permitirán decorar tu habitación y mejorar tu estilo de vestir, también contamos con cajas que te proporcionan diferentes productos de exportación Japonesa.
-<p>
-Desde productos originales hasta productos de colección.
-<p>
-Todos con la calidad y garantía que nos caracteriza como una empresa responsable y segura, la entrega de nuestros productos se realiza en la puerta de su hogar, o en el lugar donde usted nos indica.
-<p>
-La compra solo se permitirá a personas mayores de edad, o con un adulto responsable, al igual que la entrega.
-<p>
-Y si no está a gusto con su producto le devolvemos su dinero.
-                
-                </section>
-        
+        <section id="titulo">Bienvenidos a Subete no hanbai</section>
+        <section id="conte">
+            <img src="imagenes/jpg/h1.png" class="clase-izq" alt="Imagen de bienvenida">
+            <p>Aquí podrás encontrar una variedad de productos asiáticos, de buena calidad y a precios accesibles que te permitirán decorar tu habitación y mejorar tu estilo de vestir, también contamos con cajas que te proporcionan diferentes productos de exportación Japonesa.</p>
+            <p>Desde productos originales hasta productos de colección.</p>
+            <p>Todos con la calidad y garantía que nos caracteriza como una empresa responsable y segura, la entrega de nuestros productos se realiza en la puerta de su hogar, o en el lugar donde usted nos indica.</p>
+            <p>La compra solo se permitirá a personas mayores de edad, o con un adulto responsable, al igual que la entrega.</p>
+            <p>Y si no está a gusto con su producto le devolvemos su dinero.</p>
         </section>
-    
-    <!--CONTENIDO-->
-    
-    
-    
-    <!--PLANES DE HOSTING-->
-    
-    			<section id="planes">
-                
-                	<section id="phosting">
-                    
-                    <!--PAQUETE 1-->
-                    <section id="p1">
-                    
-                    	<section id="p2">Presdas de vestir</section>
-                        <section id="p3">
-                        
-                        		<img src="imagenes/png/poleras.jpg">
-                        
-                        </section>
-                        <section id="p4">
-                        
-                        	<ul>
-                            		<li class="clase-color">Polos</li>
-                                    <li class="clase-color">Poleras</li>
-                                    <li class="clase-color">Conjuntos</li>
-                                    <li class="clase-color">Zapatillas</li>
-                                    <li class="clase-precio">$.16.00 Dólares</li>
-                                    <li><img src="imagenes/png/boton-comprar.png"></li>
-                            </ul>
-                        
-                        </section>
-                    
-                    
-                    </section>
-                    <!--PAQUETE 1-->
-                    
-                    
-                    <!--PAQUETE 2-->
-                    <section id="p1">
-                    
-                    	<section id="p2">Cajas</section>
-                        <section id="p3">
-                        
-                        		<img src="imagenes/png/jumbo.jpg">
-                        
-                        </section>
-                        <section id="p4">
-                        
-                        	<ul>
-                            		<li class="clase-color">Small</li>
-                                    <li class="clase-color">Medium</li>
-                                    <li class="clase-color">Large</li>
-                                    <li class="clase-color">Jumbo</li>
-                                    <li class="clase-precio">$.24.00 Dólares</li>
-                                    <li><img src="imagenes/png/boton-comprar.png"></li>
-                            </ul>
-                        
-                        </section>
-                    
-                    
-                    </section>
-                    <!--PAQUETE 2-->
-                    
-                    
-                    <!--PAQUETE 3-->
-                    <section id="p1">
-                    
-                    	<section id="p2">Mangas</section>
-                        <section id="p3">
-                        
-                        		<img src="imagenes/png/español.jpg">
-                        
-                        </section>
-                        <section id="p4">
-                        
-                        	<ul>
-                            		<li class="clase-color">Español</li>
-                                    <li class="clase-color">Japones</li>
-                                    <li class="clase-color">Originales</li>
-                                    <li class="clase-color">Colección</li>
-                                    <li class="clase-precio">$.30.00 Dólares</li>
-                                    <li><img src="imagenes/png/boton-comprar.png"></li>
-                            </ul>
-                        
-                        </section>
-                    
-                    
-                    </section>
-                    <!--PAQUETE 3-->
-                    
-                    
-                    <!--PAQUETE 4-->
-                    <section id="p1">
-                    
-                    	<section id="p2">Objetos</section>
-                        <section id="p3">
-                        
-                        		<img src="imagenes/png/coleccion.jpg">
-                        
-                        </section>
-                        <section id="p4">
-                        
-                        	<ul>
-                            		<li class="clase-color">Pack de decoracción</li>
-                                    <li class="clase-color">Mochila</li>
-                                    <li class="clase-color">Originals</li>
-                                    <li class="clase-color">Colección</li>
-                                    <li class="clase-precio">$.90.00 Dólares</li>
-                                    <li><img src="imagenes/png/boton-comprar.png"></li>
-                            </ul>
-                        
-                        </section>
-                    
-                    
-                    </section>
-                    <!--PAQUETE 4-->
-                    
-                    
-                    
-                    </section>
-                
+    </section>
+
+    <!-- Planes de Hosting -->
+    <section id="planes">
+        <section id="phosting">
+            <!-- Paquete 1 -->
+            <section id="p1">
+                <section id="p2">Prendas de vestir</section>
+                <section id="p3">
+                    <img src="imagenes/png/poleras.jpg" alt="Prendas de vestir">
                 </section>
-    
-    <!--PLANES DE HOSTING-->
-    
-        
-    <!--TITULO MAPA-->
-    
-    	<section id="tit1">
-        
-        	<section id="tit2">Ubícanos</section>
-        
-        </section>
-    
-    <!--TITULO MAPA-->
-    
-    
-    <!--MAPA-->
-    
-    <section id="mapa">
-    
-    
-    	<iframe src="https://www.google.com/maps/d/embed?mid=1wCOuYfYKJ92X86YOmEH9mMfj4yhUQ9RS" width="100%" height="480"></iframe>
-    
-    </section>    
-    <!--MAPA-->
-    
-    <!--PIE DE PÁGINA-->
-    
-    	<footer>
-        
-        	<section id="pie">
-            
-            	<section id="direccion">
-                
-                	Calle Mercedes Gallagher 397 of. 403 - 402 <br>
-                    Teléfonos:	6338436 Celular : 987411635 <br>
-                    Email: ventas@subetenohanbai.com <br>
-                    www.subetenohanbai.com 
-                
+                <section id="p4">
+                    <ul>
+                        <li class="clase-color">Polos</li>
+                        <li class="clase-color">Poleras</li>
+                        <li class="clase-color">Conjuntos</li>
+                        <li class="clase-color">Zapatillas</li>
+                        <li class="clase-precio">$.16.00 Dólares</li>
+                        <li><img src="imagenes/png/boton-comprar.png" alt="Comprar"></li>
+                    </ul>
                 </section>
-                <section id="redes">
-                
-                	<a href="http://www.facebook.com" target="_blank"><img src="imagenes/png/boton-del-logotipo-de-facebook.png"></a>
-                    <a href="http://www.twitter.com" target="_blank"><img src="imagenes/png/boton-del-logotipo-de-twitter.png"></a>
-                    <a href="http://www.plus.google.com/?hl=es" target="_blank"><img src="imagenes/png/boton-del-logotipo-de-google-plus.png"></a>
-                
-                </section>
-            
             </section>
-        
-        </footer>
-    
-    <!--PIE DE PÁGINA-->
 
+            <!-- Paquete 2 -->
+            <section id="p1">
+                <section id="p2">Cajas</section>
+                <section id="p3">
+                    <img src="imagenes/png/jumbo.jpg" alt="Cajas">
+                </section>
+                <section id="p4">
+                    <ul>
+                        <li class="clase-color">Small</li>
+                        <li class="clase-color">Medium</li>
+                        <li class="clase-color">Large</li>
+                        <li class="clase-color">Jumbo</li>
+                        <li class="clase-precio">$.24.00 Dólares</li>
+                        <li><img src="imagenes/png/boton-comprar.png" alt="Comprar"></li>
+                    </ul>
+                </section>
+            </section>
 
+            <!-- Paquete 3 -->
+            <section id="p1">
+                <section id="p2">Mangas</section>
+                <section id="p3">
+                    <img src="imagenes/png/español.jpg" alt="Mangas">
+                </section>
+                <section id="p4">
+                    <ul>
+                        <li class="clase-color">Español</li>
+                        <li class="clase-color">Japones</li>
+                        <li class="clase-color">Originales</li>
+                        <li class="clase-color">Colección</li>
+                        <li class="clase-precio">$.30.00 Dólares</li>
+                        <li><img src="imagenes/png/boton-comprar.png" alt="Comprar"></li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Paquete 4 -->
+            <section id="p1">
+                <section id="p2">Objetos</section>
+                <section id="p3">
+                    <img src="imagenes/png/coleccion.jpg" alt="Objetos">
+                </section>
+                <section id="p4">
+                    <ul>
+                        <li class="clase-color">Pack de decoración</li>
+                        <li class="clase-color">Mochila</li>
+                        <li class="clase-color">Originals</li>
+                        <li class="clase-color">Colección</li>
+                        <li class="clase-precio">$.90.00 Dólares</li>
+                        <li><img src="imagenes/png/boton-comprar.png" alt="Comprar"></li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <!-- Título Mapa -->
+    <section id="tit1">
+        <section id="tit2">Ubícanos</section>
+    </section>
+
+    <!-- Mapa -->
+    <section id="mapa">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1wCOuYfYKJ92X86YOmEH9mMfj4yhUQ9RS" width="100%" height="480"></iframe>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <section id="pie">
+            <section id="direccion">
+                Calle Mercedes Gallagher 397 of. 403 - 402 <br>
+                Teléfonos: 6338436 Celular: 987411635 <br>
+                Email: ventas@subetenohanbai.com <br>
+                www.subetenohanbai.com
+            </section>
+            <section id="redes">
+                <a href="http://www.facebook.com" target="_blank"><img src="imagenes/png/boton-del-logotipo-de-facebook.png" alt="Facebook"></a>
+                <a href="http://www.twitter.com" target="_blank"><img src="imagenes/png/boton-del-logotipo-de-twitter.png" alt="Twitter"></a>
+                <a href="http://www.plus.google.com/?hl=es" target="_blank"><img src="imagenes/png/boton-del-logotipo-de-google-plus.png" alt="Google Plus"></a>
+            </section>
+        </section>
+    </footer>
 </body>
-
-
 </html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carrito de Compras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-4">
+        <h1 class="text-2xl font-bold text-center">Carrito de Compras</h1>
+    </header>
+    <main class="container mx-auto py-8">
+        <div class="bg-white shadow-lg rounded-lg p-4">
+            <table class="w-full text-left">
+                <thead>
+                    <tr class="border-b">
+                        <th class="py-2">Producto</th>
+                        <th class="py-2">Cantidad</th>
+                        <th class="py-2">Precio</th>
+                        <th class="py-2">Subtotal</th>
+                        <th class="py-2">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="py-2">Producto 1</td>
+                        <td class="py-2">
+                            <input type="number" value="1" class="w-16 border rounded-lg text-center">
+                        </td>
+                        <td class="py-2">S/ 99.99</td>
+                        <td class="py-2">S/ 99.99</td>
+                        <td class="py-2">
+                            <button class="text-red-500 hover:underline">Eliminar</button>
+                        </td>
+                    </tr>
+                    <!-- Repite esta fila para más productos -->
+                </tbody>
+            </table>
+            <div class="text-right mt-4">
+                <p class="text-lg font-bold">Total: S/ 99.99</p>
+                <button class="bg-green-500 text-white py-2 px-4 rounded-lg mt-2 hover:bg-green-600 transition duration-300">Finalizar Compra</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

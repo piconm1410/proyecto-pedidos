@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Productos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilo para el menú desplegable */
+        #cartDropdown {
+            display: none;
+        }
+        #cartDropdown.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Menú de Navegación -->
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="productos.html" class="text-xl font-bold hover:text-gray-200 transition duration-300">Productos</a>
+            <button id="logoutButton" class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">Cerrar Sesión</button>
+        </div>
+    </nav>
+
+    <!-- Encabezado con carrito -->
+    <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Nuestros Productos</h1>
+        <!-- Icono del carrito -->
+        <div class="relative">
+            <button id="cartButton" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">
+                Carrito (0)
+            </button>
+            <!-- Menú desplegable del carrito -->
+            <div id="cartDropdown" class="absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4 z-50">
+                <h2 class="text-lg font-bold mb-2">Carrito</h2>
+                <ul id="cartItems" class="divide-y divide-gray-200">
+                    <li class="py-2 text-gray-600">El carrito está vacío.</li>
+                </ul>
+                <div class="mt-4">
+                    <button id="checkoutButton" class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition duration-300">
+                        Finalizar Pedido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Lista de productos -->
+    <main class="container mx-auto py-8">
+        <div id="productList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Los productos se cargarán dinámicamente aquí -->
+        </div>
+    </main>
+
+    <script>
+        // Variables para el carrito
+        const cartButton = document.getElementById('cartButton');
+        const cartDropdown = document.getElementById('cartDropdown');
+        const cartItems = document.getElementById('cartItems');
+        const productList = document.getElementById('productList');
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Mostrar/Ocultar el menú desplegable del carrito
+        cartButton.addEventListener('click', () => {
+            cartDropdown.classList.toggle('active');
+        });
+
+        // Cargar productos desde el backend
+        async function loadProducts() {
+            try {
+                const response = await fetch('http://localhost:3000/api/inventario');
+                const products = await response.json();
+
+                productList.innerHTML = ''; // Limpiar la lista antes de cargar los datos
+
+                products.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.classList.add('bg-white', 'shadow-lg', 'rounded-lg', 'overflow-hidden');
+                    productCard.innerHTML = `
+                        <img src="${product.imagen}" alt="${product.nombre}" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h2 class="text-lg font-bold text-gray-800">${product.nombre}</h2>
+                            <p class="text-gray-600">${product.descripcion}</p>
+                            <p class="text-blue-600 font-bold mt-2">S/ ${product.precio.toFixed(2)}</p>
+                            <button class="addToCartButton w-full bg-blue-500 text-white py-2 rounded-lg mt-4 hover:bg-blue-600 transition duration-300" data-id="${product.id}" data-name="${product.nombre}" data-price="${product.precio}">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    `;
+                    productList.appendChild(productCard);
+                });
+
+                // Agregar funcionalidad a los botones de agregar al carrito
+                document.querySelectorAll('.addToCartButton').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const productId = button.getAttribute('data-id');
+                        const productName = button.getAttribute('data-name');
+                        const productPrice = parseFloat(button.getAttribute('data-price'));
+
+                        // Verificar si el producto ya está en el carrito
+                        const existingProduct = cart.find(item => item.id === productId);
+                        if (existingProduct) {
+                            existingProduct.quantity += 1;
+                        } else {
+                            cart.push({ id: productId, name: productName, price: productPrice, quantity: 1 });
+                        }
+
+                        updateCart();
+                    });
+                });
+            } catch (error) {
+                console.error('Error al cargar los productos:', error);
+            }
+        }
+
+        // Actualizar el contenido del carrito
+        function updateCart() {
+            // Actualizar el contador del carrito
+            cartButton.textContent = `Carrito (${cart.reduce((total, item) => total + item.quantity, 0)})`;
+
+            // Actualizar la lista de productos en el carrito
+            cartItems.innerHTML = '';
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.classList.add('py-2', 'flex', 'justify-between', 'items-center');
+                li.innerHTML = `
+                    <span>${item.name} (x${item.quantity})</span>
+                    <span>S/ ${(item.price * item.quantity).toFixed(2)}</span>
+                `;
+                cartItems.appendChild(li);
+            });
+
+            // Mostrar mensaje si el carrito está vacío
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<li class="py-2 text-gray-600">El carrito está vacío.</li>';
+            }
+
+            // Guardar el carrito en el almacenamiento local
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        // Finalizar pedido
+        document.getElementById('checkoutButton').addEventListener('click', () => {
+            if (cart.length === 0) {
+                alert('El carrito está vacío.');
+                return;
+            }
+
+            // Aquí puedes redirigir al flujo de pedido o enviar los datos al backend
+            alert('Pedido finalizado. ¡Gracias por tu compra!');
+            cart = [];
+            updateCart();
+        });
+
+        document.getElementById('logoutButton').addEventListener('click', () => {
+            localStorage.clear();
+            window.location.href = 'login.html';
+        });
+
+        // Cargar productos y actualizar el carrito al cargar la página
+        loadProducts();
+        updateCart();
+    </script>
+</body>
+</html>
